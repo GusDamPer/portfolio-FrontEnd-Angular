@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.seccion {
+    background-color: #fff;
+    padding: 10px;
+    margin: 1em;
+    border-radius: .5em;
+    border: 1px solid #aaa;
+    box-shadow: 1px 1px 2px 0 #000;
+
+}
+
+.tit1 {
+    margin: 0em 1;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+.logo {
+    width: 4em;
+    /* display: inline-block; */
+}
+
+h5 {
+    color: #777;
+}
+
+.contenido {
+    padding: 5px 5px 5px 30px;
+}
+
+footer {
+    align-items: center;
+    font-size: 14px;
+    line-height: 8px;
+}
