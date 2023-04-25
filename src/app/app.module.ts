@@ -11,6 +11,8 @@ import { PresentacionComponent } from './components/presentacion/presentacion.co
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     SkillsComponent,
     PresentacionComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
