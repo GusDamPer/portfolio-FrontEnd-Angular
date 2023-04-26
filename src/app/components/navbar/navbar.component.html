@@ -52,7 +52,8 @@
           </li>
         </ul>
         <a href="/login">
-          <button class="btn btn-outline-success" type="submit">Login</button>
+          <button class="btn btn-outline-success" type="button" (clic)="login()" *ngIf="!isLogged">Ingresar</button>
+          <button class="btn btn-outline-success" type="button" (clic)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
         </a>
       </div>
     </div>
