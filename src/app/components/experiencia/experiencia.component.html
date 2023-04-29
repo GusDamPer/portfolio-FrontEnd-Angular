@@ -1,18 +1,51 @@
 <section id="experiencia" class="seccion">
     <div class="row">
-        <div class="col-10">
+        <div class="col-9">
             <h2 class="tit1">Experiencia Laboral</h2>
         </div>
-        <div class="col-2 text-center">
-            <button type="button" class="btn btn-light" routerLink="/nuevaexp" *ngIf="isLogged">
+        <div class="col-3 text-center">
+            <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
                 <i class="fa-solid fa-plus"></i>
-                Agregar    <!-- NUEVA EXPERIENCIA -->
+                Agregar
             </button>
         </div>
     </div>
 
 
-    <div class="col-lg-1"></div>
+    <ul class="items-list">
+        <li *ngFor="let Experiencia of expe">
+          <div class="row justify-content-between contenido">
+            <h2>{{Experiencia.nombreE}}</h2>
+                <div class="col-2 text-center">
+                    <img class="logo" src="../../../assets/logo_Arg_Prog.jpg" alt="Logo Argentina Programa">
+                </div>
+                <div class="col-7 textDes">
+                    <h4>{{Experiencia.descripcionE}}</h4>
+                    <!-- <h5>{{Experiencia.end}}</h5> -->
+                </div>
+
+                <div class="col-3" *ngIf="!isLogged">
+                </div>
+
+                <div class="col-3 text-center" *ngIf="isLogged">
+                    <button type="button" class="btn btn-success m-1" routerLink="/editedu/{{Experiencia.id}}">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Editar
+                    </button>
+                
+                    <button type="button" class="btn btn-danger m-1" (click)="delete(Experiencia.id)">
+                        <i class="fa-solid fa-trash"></i>
+                        Borrar
+                    </button>
+              </div>
+          </div>
+          <br>
+        </li>
+    </ul>
+
+
+
+    <!-- <div class="col-lg-1"></div>
     <div class="col-lg-11">
         <table class="table">
             <tbody>
@@ -35,55 +68,6 @@
             </tbody>
         </table>
     </div>
-    
+     -->
 
-
-
-
-
-    <!-- <div class="row justify-content-between contenido">
-        <h2>Experiencia 1</h2>
-        <div class="col-2">
-            <img class="logo" src="../../../assets/logo_EDOS.jpg" alt="Logo EDOS">
-        </div>
-        <div class="col-8">
-            <h4>Laboratorio de control de calidad en EDOS</h4>
-        <h5>2011 - actualidad</h5>
-        </div>
-        <div class="col-2 text-center">
-            <button type="button" class="btn btn-light m-1">
-            <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button type="button" class="btn btn-light m-1">
-            <i class="fa-solid fa-trash"></i>
-            </button>
-        </div>
-    </div> -->
-
-
-
-
-
-
-    <!-- 
-    <br>
-    <div class="row justify-content-between contenido">
-        <h2>Experiencia 2</h2>
-        <div class="col-2">
-            <img class="logo" src="../../../assets/logo_MIC_CAFESG.jpg" alt="Logo MIC CAFESG">
-        </div>
-        <div class="col-8">
-            <h4>Museo Interactivo de Ciencias</h4>
-        <h5>2015 - 2016</h5>
-        </div>
-        <div class="col-2 text-center">
-            <button type="button" class="btn btn-light m-1">
-            <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button type="button" class="btn btn-light m-1">
-            <i class="fa-solid fa-trash"></i>
-            </button>
-        </div>
-    </div>
-    <br> -->
 </section>

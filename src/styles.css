@@ -4,7 +4,7 @@
 
 .seccion {
     background-color: #fff;
-    padding: 10px;
+    padding: 20px 15px 10px;
     margin: 1em;
     border-radius: .5em;
     border: 1px solid #aaa;
@@ -28,6 +28,15 @@ h5 {
 
 .contenido {
     padding: 5px 5px 5px 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+.textDes {
+    display: flex;
+    align-items: center;
 }
 
 footer {
