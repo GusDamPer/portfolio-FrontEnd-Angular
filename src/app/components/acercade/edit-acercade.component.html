@@ -1,0 +1,24 @@
+<div class="container" *ngIf="acerca">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <!-- <label for="nombre">Título</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="acerca.nombre" required> -->
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Ingrese el texto de presentación</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="acerca.descripcion" required>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="img">Ingrese una imagen</label>
+                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="acerca.img" required>
+                </div> -->
+                <br>
+                <button class="btn btn-success">
+                    Actualizar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

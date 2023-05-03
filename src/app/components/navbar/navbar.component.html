@@ -55,10 +55,10 @@
             </ul>
           </li>
         </ul>
-        <a href="/login">
-          <button class="btn btn-outline-success" type="button" (clic)="login()" *ngIf="!isLogged">Ingresar</button>
-          <button class="btn btn-outline-success" type="button" (clic)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
-        </a>
+        
+        <button class="btn btn-outline-success" type="button" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+        <button class="btn btn-outline-success" type="button" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
+      
       </div>
     </div>
   </nav>

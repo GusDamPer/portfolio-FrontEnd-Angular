@@ -20,11 +20,9 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  onLogOut(): void {
+  onLogOut(){
     this.tokenService.logOut();
     window.location.reload();
-    sessionStorage.clear();
-    this.router.navigate(['']);
   }
 
   login(){
