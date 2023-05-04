@@ -17,11 +17,12 @@
           <div class="row justify-content-between contenido">
             <h2>{{Educacion.nombreE}}</h2>
                 <div class="col-2 text-center">
-                    <img class="logo" src="../../../assets/logo_Arg_Prog.jpg" alt="Logo Argentina Programa">
+                    <img class="logo" src="{{Educacion.img}}" alt="logo">
                 </div>
-                <div class="col-7 textDes">
+
+                <div class="col-7">
                     <h4>{{Educacion.descripcionE}}</h4>
-                    <!-- <h5>{{educacion.end}}</h5> -->
+                    <h5>{{Educacion.fechaini}} - {{Educacion.fechafin}}</h5>
                 </div>
 
                 <div class="col-3" *ngIf="!isLogged">
@@ -42,33 +43,5 @@
           <br>
         </li>
     </ul>
-    
-
-    
-    <!-- <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Educacion of educacion">
-                    <td><h2>{{Educacion.nombreE}}</h2></td>
-                    <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button type="button" class="btn btn-light m-1" routerLink="/editedu/{{Educacion.id}}">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                            Editar
-                        </button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button type="button" class="btn btn-light m-1" (click)="delete(Educacion.id)">
-                            <i class="fa-solid fa-trash"></i>
-                            Borrar
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div> -->
-    
-
 
 </section>

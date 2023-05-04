@@ -1,27 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Acerca } from 'src/app/model/acerca';
-import { AcercaService } from 'src/app/service/acerca.service';
-
+import { Proyectos } from 'src/app/model/proyectos';
+import { ProyectosService } from 'src/app/service/proyectos.service';
 
 @Component({
-  selector: 'app-edit-acercade',
-  templateUrl: './edit-acercade.component.html',
-  styleUrls: ['./edit-acercade.component.css']
+  selector: 'app-edit-proyectos',
+  templateUrl: './edit-proyectos.component.html',
+  styleUrls: ['./edit-proyectos.component.css']
 })
+export class EditProyectosComponent implements OnInit {
+  proyectos: Proyectos = null;
 
-export class EditAcercadeComponent implements OnInit {
-  acerca: Acerca = null;
-
-  constructor(private acercaS: AcercaService, private activatedRouter: ActivatedRoute,
+  constructor(private proyectosS: ProyectosService, private activatedRouter: ActivatedRoute,
     private router: Router){}
 
   ngOnInit(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.acercaS.detail(id).subscribe(
+    this.proyectosS.detail(id).subscribe(
       {
         next: data => {
-          this.acerca = data;
+          this.proyectos = data;
         }, 
         error: err => {
           alert("Error al modificar");
@@ -33,17 +31,16 @@ export class EditAcercadeComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.acercaS.update(id, this.acerca).subscribe(
+    this.proyectosS.update(id, this.proyectos).subscribe(
       {
         next: data => {
           this.router.navigate(['']);
         }, 
         error: err =>{
-          alert("Error al modificar");
+          alert("Error al modificar el proyecto");
           this.router.navigate(['']);
         }
       }
     )
   }
-
 }

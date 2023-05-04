@@ -17,11 +17,12 @@
           <div class="row justify-content-between contenido">
             <h2>{{Experiencia.nombreE}}</h2>
                 <div class="col-2 text-center">
-                    <img class="logo" src="../../../assets/logo_Arg_Prog.jpg" alt="Logo Argentina Programa">
+                    <img class="logo" src="{{Experiencia.img}}" alt="Logo Argentina Programa">
                 </div>
-                <div class="col-7 textDes">
+
+                <div class="col-7">
                     <h4>{{Experiencia.descripcionE}}</h4>
-                    <!-- <h5>{{Experiencia.end}}</h5> -->
+                    <h5>{{Experiencia.fechaini}} - {{Experiencia.fechafin}}</h5>
                 </div>
 
                 <div class="col-3" *ngIf="!isLogged">
@@ -42,32 +43,5 @@
           <br>
         </li>
     </ul>
-
-
-
-    <!-- <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Experiencia of expe">
-                    <td><h2>{{Experiencia.nombreE}}</h2></td>
-                    <td>{{Experiencia.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button type="button" class="btn btn-light m-1" routerLink="/editexp/{{Experiencia.id}}">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                            Editar
-                        </button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button type="button" class="btn btn-light m-1" (click)="delete(Experiencia.id)">
-                            <i class="fa-solid fa-trash"></i>
-                            Borrar
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-     -->
 
 </section>

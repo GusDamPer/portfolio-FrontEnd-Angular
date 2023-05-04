@@ -34,11 +34,6 @@ ul {
     list-style: none;
 }
 
-.textDes {
-    display: flex;
-    align-items: center;
-}
-
 footer {
     align-items: center;
     font-size: 14px;

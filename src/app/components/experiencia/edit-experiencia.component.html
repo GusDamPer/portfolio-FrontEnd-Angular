@@ -10,6 +10,18 @@
                     <label for="descripcionE">Descripcion de tareas</label>
                     <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
                 </div>
+                <div class="form-group">
+                    <label for="img">Imagen</label>
+                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="expLab.img" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaini">Fecha de inicio</label>
+                    <input type="text" class="form-control" id="fechaini" name="fechaini" [(ngModel)]="expLab.fechaini" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechafin">Fecha de fin</label>
+                    <input type="text" class="form-control" id="fechafin" name="fechafin" [(ngModel)]="expLab.fechafin" required>
+                </div>
                 <br>
                 <button class="btn btn-success">
                     Actualizar
