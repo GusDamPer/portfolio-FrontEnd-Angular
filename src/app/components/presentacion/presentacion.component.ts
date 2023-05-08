@@ -8,9 +8,21 @@ import { TokenService } from 'src/app/service/token.service';
   templateUrl: './presentacion.component.html',
   styleUrls: ['./presentacion.component.css']
 })
+
 export class PresentacionComponent implements OnInit {
-  persona: persona = null;
-  
+  persona: persona = {
+    id: 0,
+    nombre: "",
+    apellido: "",
+    img: "",
+    puesto: "",
+    compania: "",
+    acerca: "",
+    ubicacion: "",
+  };
+
+  isLoading: boolean = true;
+
   constructor(public personaService: personaService, private tokenService: TokenService){}
   isLogged = false;
 
@@ -24,8 +36,12 @@ export class PresentacionComponent implements OnInit {
   }
 
   cargarPersona(): void{
-    this.personaService.detail(1).subscribe( 
-      data => {this.persona = data}
+    this.isLoading = true;
+    this.personaService.detail(1).subscribe(
+      data => {
+        this.persona = data;
+        this.isLoading = false;
+      }
     )
   }
 }

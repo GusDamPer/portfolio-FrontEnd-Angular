@@ -42,9 +42,4 @@ export class EditPresentacionComponent implements OnInit {
       }
     )
   }
-
-  uploadImage($event:any){
-    
-  }
-
 }
