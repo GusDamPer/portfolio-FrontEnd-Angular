@@ -1,6 +1,6 @@
 <section id="home" class="presentacion m-3">
 
-    <img class="banner" src="../../../assets/banner.png" alt="banner" class="w-100 img-fluid">
+    <img src="../../../assets/banner.png" alt="banner" class="w-100 img-fluid banner">
 
     <div class="row justify-content-between presentacion_datos">
 
@@ -9,17 +9,24 @@
         <h1 class="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
         <h4>{{persona.puesto}}</h4>
         <h4>{{persona.compania}}</h4>
-        <br><p>{{persona.ubicacion}} <a href="http://">Información de contacto</a></p>
+        <br>
+        <span>{{persona.ubicacion}}</span><br>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Información de contacto
+        </button>
+
+        <br>
       </div>
 
-      
+
       <div class="col-5 instituciones">
         <img class="logo" src="../../../assets/logo_UNER.png" alt="logo UNER">
         <h4>Universidad Nacional de Entre Ríos</h4> <br>
         <img class="logo" src="../../../assets/logo_Arg_Prog.jpg" alt="Logo Argentina Programa">
         <h4>Argentina programa</h4>
       </div>
-      
+
       <span>
         <button type="button" class="btn btn-success m-1" routerLink="/editpresentacion/1" *ngIf="isLogged">
         <i class="fa-solid fa-pen-to-square"></i>
@@ -27,5 +34,32 @@
       </button>
       </span>
 
+      <div id="spinner-container" class="col-12 pb-5 spinner-container" *ngIf="isLoading">
+        <div class="spinner-border spinner-border-lg text-danger" role="status">
+          <span class="visually-hidden">Loading</span>
+        </div>
+      </div>
     </div>
+
+    Modal
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Información de contacto</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Email: gusdamper@gmail.com</p>
+            <p>Teléfono: +54 345 4329466</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 </section>
+
+
