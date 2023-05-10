@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { API_URL } from 'config';
 import { Observable } from 'rxjs';
 import { Educacion } from '../model/educacion';
 
@@ -7,7 +8,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'http://localhost:8080/educacion/'
+  URL = API_URL+'educacion/'
 
   constructor(private httpClient: HttpClient) { }
 

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { API_URL } from 'config';
 import { Observable } from 'rxjs';
 import { Acerca } from '../model/acerca';
 
@@ -7,7 +8,7 @@ import { Acerca } from '../model/acerca';
   providedIn: 'root'
 })
 export class AcercaService {
-  URL = 'http://localhost:8080/acerca/'
+  URL = API_URL+'acerca/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { API_URL } from 'config';
 import { Observable } from 'rxjs';
 import { Experiencia } from '../model/experiencia';
 
@@ -7,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL = 'http://localhost:8080/explab/'
+  expURL = API_URL+'explab/'
 
   constructor(private httpClient: HttpClient) { }
 

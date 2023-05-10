@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { API_URL } from 'config';
 import { Observable } from 'rxjs';
 import { Proyectos } from '../model/proyectos';
 
@@ -7,7 +8,7 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  URL = 'http://localhost:8080/proyectos/'
+  URL = API_URL+'proyectos/'
 
   constructor(private httpClient: HttpClient) { }
 

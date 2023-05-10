@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { API_URL } from 'config';
 import { Observable } from 'rxjs';
 import { Skills } from '../model/skills';
 
@@ -7,7 +8,7 @@ import { Skills } from '../model/skills';
   providedIn: 'root'
 })
 export class SkillsService {
-  URL = 'http://localhost:8080/skills/'
+  URL = API_URL+'skills/'
 
   constructor(private httpClient: HttpClient) { }
 
