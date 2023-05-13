@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
       this.isLogged = false;
       this.isLogginFail = true;
       this.errMsj = err.error.mensaje;
+      alert("Usuario o contraseña incorrecta");
       console.log(this.errMsj);
     })
   }

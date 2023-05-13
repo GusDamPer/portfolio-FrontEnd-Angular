@@ -14,13 +14,13 @@
 
   <ul class="items-list">
       <li *ngFor="let Proyectos of proyectos">
-        <div class="row justify-content-between contenido">
-          <h2>{{Proyectos.nombre}}</h2>
-              <!-- <div class="col-2 text-center">
-                  <img class="logo" src="{{Proyectos.img}}" alt="logo">
-              </div> -->
+        <div class="row justify-content-between contenido proyecto">
+          <a href={{Proyectos.link}}><h2>{{Proyectos.nombre}}</h2></a>
+              <div class="col-3 text-center">
+                  <img class="proyecto.img" src="{{Proyectos.img}}" alt="logo">
+              </div>
 
-              <div class="col-9">
+              <div class="col-6">
                   <h4>{{Proyectos.descripcion}}</h4>
               </div>
 
@@ -32,7 +32,7 @@
                       <i class="fa-solid fa-pen-to-square"></i>
                       Editar
                   </button>
-              
+
                   <button type="button" class="btn btn-danger m-1" (click)="delete(Proyectos.id)">
                       <i class="fa-solid fa-trash"></i>
                       Borrar
