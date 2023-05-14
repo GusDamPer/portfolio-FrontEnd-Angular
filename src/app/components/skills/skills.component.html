@@ -1,9 +1,9 @@
 <section id="skills" class="seccion">
     <div class="row">
-        <div class="col-9">
+        <div class="col-7">
           <h2 class="tit1">Hard Skills & Soft Skills</h2>
         </div>
-        <div class="col-3 text-center">
+        <div class="col-5 text-center">
           <button type="button" class="btn btn-secondary" routerLink="/nuevaskill" *ngIf="isLogged">
             <i class="fa-solid fa-plus"></i>
             Agregar
@@ -16,25 +16,23 @@
       <li *ngFor="let Skills of skills">
         <div class="row align-items-center">
           <div class="col-2"></div>
-          <div class="col-7 skills">
+          <div class="col-8 skills">
             <h4>{{Skills.nombre}}</h4>
             <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
               <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: {{Skills.porcentaje}}%"></div>
+            </div>
           </div>
-          </div>
+          <div class="col-2"></div>
 
-          <div class="col-3" *ngIf="!isLogged">
-          </div>
-
-          <div class="col-3 text-center" *ngIf="isLogged">
+          <div class="text-center" *ngIf="isLogged">
               <button type="button" class="btn btn-success m-1" routerLink="/editskill/{{Skills.id}}">
                   <i class="fa-solid fa-pen-to-square"></i>
-                  Editar
+                  <span> Editar</span>
               </button>
 
               <button type="button" class="btn btn-danger m-1" (click)="delete(Skills.id)">
                   <i class="fa-solid fa-trash"></i>
-                  Borrar
+                  <span> Borrar</span>
               </button>
           </div>
         </div>

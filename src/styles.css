@@ -2,6 +2,13 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+body {
+  background-image: url('https://i.pinimg.com/originals/73/66/fd/7366fd4632d347c0fc0e0d82c374fedd.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .login-fondo {
   background-image: url('https://i.pinimg.com/originals/73/66/fd/7366fd4632d347c0fc0e0d82c374fedd.jpg');
   background-repeat: no-repeat;
@@ -14,7 +21,7 @@
 }
 
 .presentacion {
-  background-color: #fff;
+  background-color: #ffffff;
   margin-top: 150px;
   margin: 1em;
   border-radius: .5em;
@@ -72,11 +79,11 @@ p {
 .tit1 {
     margin: 0em 1;
     text-shadow: 2px 2px 2px #aaa;
+    font-size: 3rem;
 }
 
-.logo {
-    width: 4em;
-    /* display: inline-block; */
+.logo-presentacion {
+    width: 6rem;
 }
 
 h5 {
@@ -91,18 +98,40 @@ ul {
     list-style: none;
 }
 
+.logo {
+  width: fit-content;
+}
+
 footer{
-    background-color: #000;
-    color: #fff;
-    padding: 20px 20px 5px;
-    display: flex;
-    justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 20px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer>p {
+  font-size: 20px;
 }
 
 
 @media (max-width: 1200px) {
   p {
     font-size: 1.5em;
+  }
+
+  footer>p  {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .tit1 {
+    font-size: 2.4rem;
+  }
+
+  .logo-presentacion {
+    width: 4rem;
   }
 }
 
@@ -117,6 +146,10 @@ footer{
   p {
     font-size: 1.2em;
   }
+
+  .tit1 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 617px) {
@@ -127,8 +160,27 @@ footer{
     width: 150px;
   }
 
+  h4 {
+    font-size: 1.2em;
+  }
+  h5 {
+    font-size: 1em;
+  }
+
   .btn {
     font-size: .8em;
+  }
+
+  .items-list {
+    margin-left: -10%;
+  }
+
+  .tit1 {
+    font-size: 1.4rem;
+  }
+
+  footer>p  {
+    font-size: 12px;
   }
 }
 
@@ -136,17 +188,44 @@ footer{
   .fotoperfil {
     position: relative;
     margin-top: -55px;
-    margin-left: 1em;
+    margin-left: 0;
     width: 100px;
+  }
+
+  .foto-nombre {
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
 
   .nombre {
     font-size: 1.7em;
   }
+
   h4 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   h5 {
     font-size: .8em;
   }
+
+  .logo-presentacion {
+    width: 2em;
+  }
+
+  .instituciones {
+    display: none;
+  }
+
+  .items-list {
+    margin-left: -12%;
+  }
+
+  .tit1 {
+    font-size: 1.1rem;
+  }
+
+/*   .btn-success>span, .btn-danger>span {
+    display: none;
+  } */
 }

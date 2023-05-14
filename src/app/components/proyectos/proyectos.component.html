@@ -1,9 +1,9 @@
 <section id="proyectos" class="seccion">
   <div class="row">
-      <div class="col-9">
+      <div class="col-7">
           <h2 class="tit1">Proyectos</h2>
       </div>
-      <div class="col-3 text-center">
+      <div class="col-5 text-center">
           <button type="button" class="btn btn-secondary" routerLink="/nuevoproyectos" *ngIf="isLogged">
               <i class="fa-solid fa-plus"></i>
               Agregar
@@ -20,22 +20,19 @@
                   <img class="proyecto.img" src="{{Proyectos.img}}" alt="logo">
               </div>
 
-              <div class="col-6">
+              <div class="col-9">
                   <h4>{{Proyectos.descripcion}}</h4>
               </div>
 
-              <div class="col-3" *ngIf="!isLogged">
-              </div>
-
-              <div class="col-3 text-center" *ngIf="isLogged">
+              <div class="text-center" *ngIf="isLogged">
                   <button type="button" class="btn btn-success m-1" routerLink="/editproyectos/{{Proyectos.id}}">
                       <i class="fa-solid fa-pen-to-square"></i>
-                      Editar
+                      <span> Editar</span>
                   </button>
 
                   <button type="button" class="btn btn-danger m-1" (click)="delete(Proyectos.id)">
                       <i class="fa-solid fa-trash"></i>
-                      Borrar
+                      <span> Borrar</span>
                   </button>
             </div>
         </div>

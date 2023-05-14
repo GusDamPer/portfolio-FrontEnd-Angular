@@ -1,9 +1,9 @@
 <section id="about" class="seccion">
   <div class="row">
-      <div class="col-9">
+      <div class="col-7">
           <h2 class="tit1">Acerca de</h2>
       </div>
-      <div class="col-3 text-center">
+      <div class="col-5 text-center">
           <button type="button" class="btn btn-secondary" routerLink="/nuevoacercade" *ngIf="isLogged">
               <i class="fa-solid fa-plus"></i>
               Agregar
@@ -16,25 +16,25 @@
     <li *ngFor="let Acerca of acerca">
       <div class="row justify-content-between contenido">
 
-        <div class="col-1 text-center">
-        </div>
+        <!-- <div class="col-1 text-center">
+        </div> -->
 
-        <div class="col-8 textDes">
+        <div class="col-11 textDes">
             <p>{{Acerca.descripcion}}</p>
         </div>
 
-        <div class="col-3" *ngIf="!isLogged">
+        <div class="col-1" *ngIf="!isLogged">
         </div>
 
-        <div class="col-3 text-center" *ngIf="isLogged">
+        <div class="text-center" *ngIf="isLogged">
             <button type="button" class="btn btn-success m-1" routerLink="/editacercade/{{Acerca.id}}">
                 <i class="fa-solid fa-pen-to-square"></i>
-                Editar
+                <span> Editar</span>
             </button>
 
             <button type="button" class="btn btn-danger m-1" (click)="delete(Acerca.id)">
                 <i class="fa-solid fa-trash"></i>
-                Borrar
+                <span> Borrar</span>
             </button>
         </div>
       </div>

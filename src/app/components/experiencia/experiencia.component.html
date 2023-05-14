@@ -1,9 +1,9 @@
 <section id="experiencia" class="seccion">
     <div class="row">
-        <div class="col-9">
+        <div class="col-7">
             <h2 class="tit1">Experiencia Laboral</h2>
         </div>
-        <div class="col-3 text-center">
+        <div class="col-5 text-center">
             <button type="button" class="btn btn-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
                 <i class="fa-solid fa-plus"></i>
                 Agregar
@@ -16,27 +16,24 @@
         <li *ngFor="let Experiencia of expe">
           <div class="row justify-content-between contenido">
             <h2>{{Experiencia.nombreE}}</h2>
-                <div class="col-2 text-center">
+                <div class="col-3 text-center">
                     <img class="logo" src="{{Experiencia.img}}" alt="Logo Argentina Programa">
                 </div>
 
-                <div class="col-7">
+                <div class="col-9">
                     <h4>{{Experiencia.descripcionE}}</h4>
                     <h5>{{Experiencia.fechaini}} - {{Experiencia.fechafin}}</h5>
                 </div>
 
-                <div class="col-3" *ngIf="!isLogged">
-                </div>
-
-                <div class="col-3 text-center" *ngIf="isLogged">
+                <div class="text-center" *ngIf="isLogged">
                     <button type="button" class="btn btn-success m-1" routerLink="/editexp/{{Experiencia.id}}">
                         <i class="fa-solid fa-pen-to-square"></i>
-                        Editar
+                        <span> Editar</span>
                     </button>
-                
+
                     <button type="button" class="btn btn-danger m-1" (click)="delete(Experiencia.id)">
                         <i class="fa-solid fa-trash"></i>
-                        Borrar
+                        <span> Borrar</span>
                     </button>
               </div>
           </div>
