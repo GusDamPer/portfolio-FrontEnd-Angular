@@ -62,12 +62,23 @@ p {
 
 
 .seccion {
-    background-color: #fff;
-    padding: 20px 15px 10px;
-    margin: 1em;
-    border-radius: .5em;
-    border: 1px solid #aaa;
-    box-shadow: 1px 1px 2px 0 #000;
+  background-color: rgba(255, 255, 255, .8);
+  padding: 20px 15px 10px;
+  margin: 1em;
+  border-radius: .5em;
+  border: 1px solid #aaa;
+  box-shadow: 1px 1px 2px 0 #000;
+}
+
+.add-edit {
+  background-color: rgba(255, 255, 255, .8);
+  display: block;
+  position: relative;
+  justify-content: center;
+  margin-top: 5%;
+  border-radius: .5em;
+  border: 1px solid #aaa;
+  box-shadow: 1px 1px 2px 0 #000;
 }
 
 .spinner-container {
@@ -78,8 +89,10 @@ p {
 
 .tit1 {
     margin: 0em 1;
-    text-shadow: 2px 2px 2px #aaa;
+    color: darkgreen;
+    text-shadow: 1px 1px 2px #aaa;
     font-size: 3rem;
+    font-weight: bold;
 }
 
 .logo-presentacion {
@@ -99,7 +112,7 @@ ul {
 }
 
 .logo {
-  width: fit-content;
+  width: 80%;
 }
 
 footer{
@@ -113,7 +126,6 @@ footer{
 footer>p {
   font-size: 20px;
 }
-
 
 @media (max-width: 1200px) {
   p {
@@ -176,7 +188,7 @@ footer>p {
   }
 
   .tit1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   footer>p  {
@@ -222,7 +234,7 @@ footer>p {
   }
 
   .tit1 {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
   }
 
 /*   .btn-success>span, .btn-danger>span {
