@@ -1,4 +1,7 @@
 # MyApp
+Entrega final de Frontend en Angular para trabajo final de Argentina Programa.
+Utiliza de backend el repositorio "portfolio-BackEnd" con Render. Y de base de datos Clever Cloud.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
